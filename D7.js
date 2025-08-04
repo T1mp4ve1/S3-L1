@@ -51,7 +51,7 @@ console.log("___Esercizio_4___");
 
 function sommaArray(array) {
   let somma = 0;
-  array.forEach((numer) => {
+  array.forEach(numer => {
     somma += numer;
   });
   return somma;
@@ -77,7 +77,7 @@ console.log("");
 console.log("___Esercizio_6___");
 
 function functionPiuUno(array) {
-  let arrayPiuUno = array.map((num) => num + 1);
+  let arrayPiuUno = array.map(num => num + 1);
   return arrayPiuUno;
 }
 console.log(functionPiuUno(arrayRandomTen));
@@ -105,7 +105,7 @@ console.log("___Esercizio_8___");
 
 function funcDispari() {
   let array100 = [];
-  for (x = 0; x < 100; x++) {
+  for (let x = 0; x < 100; x++) {
     if (x % 2 !== 0) array100.push(x);
   }
   return array100;
@@ -274,7 +274,7 @@ console.log("");
 console.log("___Esercizio_12___");
 
 function moviesFilterMill(array) {
-  return array.filter((film) => film.Year > 1999);
+  return array.filter((film) => parseInt(film.Year) > 1999);
 }
 console.log(moviesFilterMill(movies));
 
@@ -308,6 +308,6 @@ console.log("___Esercizio_15___");
 
 function moveFindYear(array, anno) {
   let posizione = array.findIndex(film => parseInt(film.Year) === anno);
-  return array[posizione];
+  return posizione;
 }
 console.log(moveFindYear(movies, 2005))
